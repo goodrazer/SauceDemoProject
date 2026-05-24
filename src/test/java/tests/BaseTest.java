@@ -22,8 +22,8 @@ public class BaseTest {
     protected CheckoutYourInformationPage checkoutYourInformationPage;
     protected CheckoutOverviewPage checkoutOverviewPage;
     protected CheckoutCompletePage checkoutCompletePage;
-    protected String validUser = System.getProperty("User");
-    protected String validPassword = System.getProperty("Password");
+    protected String validUser = System.getProperty("user");
+    protected String validPassword = System.getProperty("password");
 
 
     @Parameters ({"browser"})
