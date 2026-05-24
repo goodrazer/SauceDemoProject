@@ -44,5 +44,5 @@ jobs:
       with:
         firefox-version: latest
     - name: Build SauceDemoProject
-      run: mvn clean -Duser=$USER -Dpassword=PASSWORD test
+      run: mvn clean -DUser=$USER -DPassword=PASSWORD test
 

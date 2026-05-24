@@ -23,8 +23,8 @@ public class BaseTest {
     protected CheckoutYourInformationPage checkoutYourInformationPage;
     protected CheckoutOverviewPage checkoutOverviewPage;
     protected CheckoutCompletePage checkoutCompletePage;
-    protected String validUser = System.getProperty("user", PropertyReader.getProperty("user"));
-    protected String validPassword = System.getProperty("password", PropertyReader.getProperty("password"));
+    protected String validUser = System.getProperty("User", PropertyReader.getProperty("user"));
+    protected String validPassword = System.getProperty("Password", PropertyReader.getProperty("password"));
 
 
     @Parameters ({"browser"})
