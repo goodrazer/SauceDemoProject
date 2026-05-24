@@ -1,6 +1,7 @@
 package tests;
 
 import Utils.DriverManager;
+import Utils.PropertyReader;
 import Utils.TestListener;
 import io.qameta.allure.Description;
 import io.qameta.allure.testng.AllureTestNg;
@@ -22,8 +23,8 @@ public class BaseTest {
     protected CheckoutYourInformationPage checkoutYourInformationPage;
     protected CheckoutOverviewPage checkoutOverviewPage;
     protected CheckoutCompletePage checkoutCompletePage;
-    protected String validUser = System.getProperty("user");
-    protected String validPassword = System.getProperty("password");
+    protected String validUser = System.getProperty("user", PropertyReader.getProperty("user"));
+    protected String validPassword = System.getProperty("password", PropertyReader.getProperty("password"));
 
 
     @Parameters ({"browser"})

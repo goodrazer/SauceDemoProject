@@ -45,7 +45,7 @@ public class LoginTest extends BaseTest {
     public void checkLoginWitchEmptyPassword () {
         loginPage.openPage()
                 .isPageOpened()
-                .negativeLogin("standard_user", " ");
+                .negativeLogin("standard_user", "");
         Assert.assertEquals(loginPage.getErrorMessage(),"Epic sadface: Password is required");
     }
 
@@ -65,7 +65,7 @@ public class LoginTest extends BaseTest {
     public void checkLoginWitchEmptyUser () {
         loginPage.openPage()
                 .isPageOpened()
-                .negativeLogin(" ", "secret_sauce");
+                .negativeLogin("", "secret_sauce");
         Assert.assertEquals(loginPage.getErrorMessage(),"Epic sadface: Username is required");
     }
 
@@ -94,8 +94,8 @@ public class LoginTest extends BaseTest {
     @DataProvider (name = "Тестовые даннны для негативных проверок заполнения полей при логине клиента", indices = {0,2})
     public Object[][] loginData (){
         return new Object[][] {
-                {"standard_user"," ","Epic sadface: Password is required"},
-                {" ","secret_sauce","Epic sadface: Username is required"},
+                {"standard_user","","Epic sadface: Password is required"},
+                {"","secret_sauce","Epic sadface: Username is required"},
                 {"Invalid_Login","Invalid_password","Epic sadface: Username and password do not match any user in this service"},
         };
     }
