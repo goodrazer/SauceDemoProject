@@ -29,12 +29,12 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Install chrome browser
-      uses: abni1693/setup-browser@v0.3.4
+      uses: abhi1693/setup-browser@v0.3.4
       with:
         browser: chrome
         version: latest
     - name: Install firefox browser
-      uses: abni1693/setup-browser@v0.3.4
+      uses: abhi1693/setup-browser@v0.3.4
       with:
        browser: firefox
        version: latest
