@@ -22,7 +22,7 @@ public class TransitionToPageCheckoutYourInformationTest extends BaseTest {
     public void checkingTheTransitionToTheCheckoutForm () {
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()

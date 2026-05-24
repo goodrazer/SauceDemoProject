@@ -22,7 +22,7 @@ public class AddingAProductToTheBasketTest extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .clickButtonAddToCart("Sauce Labs Backpack");
         String expectedName = productsPage.getNameProductSauceLabsBackpack();
         String expectedPrice = productsPage.getCostOfTheFirstItem();

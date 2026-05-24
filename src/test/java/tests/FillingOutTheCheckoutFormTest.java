@@ -23,7 +23,7 @@ public class FillingOutTheCheckoutFormTest extends BaseTest {
     public void checkFillingOutTheCheckoutFormValidValue() {
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()
@@ -52,7 +52,7 @@ public class FillingOutTheCheckoutFormTest extends BaseTest {
     public void checkFillingOutTheCheckoutFormInvalidFirstName() {
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()
@@ -81,7 +81,7 @@ public class FillingOutTheCheckoutFormTest extends BaseTest {
     public void checkFillingOutTheCheckoutFormInvalidLastName() {
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()
@@ -110,7 +110,7 @@ public class FillingOutTheCheckoutFormTest extends BaseTest {
     public void checkFillingOutTheCheckoutFormInvalidPostalCode() {
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()
@@ -147,7 +147,7 @@ public class FillingOutTheCheckoutFormTest extends BaseTest {
     public void inputNegativeLogin (String firstName, String lastName, String postalCode,String errorMessage) {
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()

@@ -34,9 +34,9 @@ public class LoginPage extends BasePage{
 
     @Step("Авторизация покупателя с вводом валидных парметров: " +
             "{user} и {password} на странице 'Login'")
-    public ProductsPage positiveLogin() {
-        driver.findElement(USERNAME_FIELD).sendKeys("standard_user");
-        driver.findElement(PASSWORD_FIELD).sendKeys("secret_sauce");
+    public ProductsPage positiveLogin(String validUser, String validPassword) {
+        driver.findElement(USERNAME_FIELD).sendKeys(validUser);
+        driver.findElement(PASSWORD_FIELD).sendKeys(validPassword);
         driver.findElement(LOGIN_BUTTON).click();
         return new ProductsPage(driver);
     }

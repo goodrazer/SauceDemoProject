@@ -20,7 +20,7 @@ public class TransitionToProductsPageFromCheckoutOverviewTest extends BaseTest {
     @Owner("Malevaniy Anton")
     public void executionTransitionToProductsPageFromCheckoutOverview() {
         loginPage.openPage()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()

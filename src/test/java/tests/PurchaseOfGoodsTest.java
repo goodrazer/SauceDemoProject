@@ -24,7 +24,7 @@ public class PurchaseOfGoodsTest extends BaseTest {
     public void purchaseOfGoods() {
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()
@@ -58,7 +58,7 @@ public class PurchaseOfGoodsTest extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin()
+                .positiveLogin(validUser, validPassword)
                 .isPageOpened()
                 .clickButtonAddToCart("Sauce Labs Backpack")
                 .clickButtonBasket()

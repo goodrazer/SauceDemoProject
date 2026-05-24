@@ -24,7 +24,7 @@ public class LoginTest extends BaseTest {
     public void checkLoginWithPositiveCred() {
         loginPage.openPage()
                 .isPageOpened()
-                .positiveLogin();
+                .positiveLogin(validUser,validPassword);
         Assert.assertEquals(productsPage.getTitleProducts(),"Products");
     }
 

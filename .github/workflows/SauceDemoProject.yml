@@ -20,6 +20,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+     USER: ${{secrets.VALID_USER}}
+     PASSWORD: ${{secrets.VALID_PASSWORD}}
+
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
@@ -38,5 +42,5 @@ jobs:
       with:
         firefox-version: latest
     - name: Build SauceDemoProject
-      run: mvn clean test
+      run: mvn clean -Duser=$USER -Dpassword=PASSWORD test
 
